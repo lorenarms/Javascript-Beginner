@@ -8,8 +8,14 @@
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/app.css" />
+      />
+      <link rel="stylesheet" href="assets/styles/app.css" />
+      <!-- defer keyword downloads the script but parses after the html code has been parsed
+           async executes as soon as the script is downloaded, regardless if html is done
+          async will execute as soon as the file is downloaded
+        defer guarantees the order that everything is executed -->
+      <script src="assets/scripts/vendor.js" defer></script>
+      <script src="assets/scripts/app.js" defer></script> 
     </head>
   <body>
     <header>
@@ -29,8 +35,6 @@
       <h2 id="current-calculation">0</h2>
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
-    <script src="assets/scripts/vendor.js"></script>
-    <script src="assets/scripts/app.js"></script> 
     
   </body>
   </html>
